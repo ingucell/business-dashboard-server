@@ -5,6 +5,7 @@ import cors from 'cors'
 import dotenv from 'dotenv'
 import helmet from 'helmet'
 import morgan from 'morgan'
+import kpiRoutes from './routes/kpi.js'
 
 // congiguraions
 
@@ -18,9 +19,10 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false}))
 app.use(cors())
 
-console.log('mathias')
-// mongoose setup
+// Routes
+app.use("/kpi", kpiRoutes);
 
+// mongoose setup
 const PORT = process.env.PORT || 9000;
 mongoose
 .connect(process.env.MONGO_URL,{
