@@ -43,8 +43,8 @@ mongoose
  
     // Add Data one time only
     //await mongoose.connection.db.dropDatabase();
-    //KPI.insertMany(kpis);
+   // KPI.insertMany(kpis);
      //Product.insertMany(products)
-
+     //Transaction.insertMany(transactions)
 })
 .catch((error=> console.log(`${error} did not connect`)))

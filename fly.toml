@@ -1,0 +1,15 @@
+# fly.toml app configuration file generated for late-moon-3289 on 2023-06-30T13:54:18Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "late-moon-3289"
+primary_region = "lhr"
+
+[http_service]
+  internal_port = 3000
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ["app"]
